@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head style="padding: 0; margin: 0">
+    <meta charset="UTF-8">
+    <title>Airport Billboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        #arrivalHeader {
+            background-color: yellow;
+            padding: 2px;
+        }
+
+        #arrivalTable {
+            color: white;
+            padding: 8px;
+            font-size: large;
+        }
+
+        #arrivalTable thead {
+            color: lightgrey;
+        }
+
+        #arrivalTable td {
+            padding: 2px;
+        }
+    </style>
+</head>
+<body>
+<div id="arrivalHeader">
+    <h1>Arrivals</h1>
+</div>
+<table id="arrivalTable">
+    <thead>
+    <td style="min-width: 120px">FLIGHT</td>
+    <td style="min-width: 120px">FROM</td>
+    <td style="min-width: 120px">STATUS</td>
+    </thead>
+    <tbody id="arrivalList">
+        <!-- flights will go here -->
+    </tbody>
+</table>
+</body>
+<!-- Loading script -->
+<script src="main.js"></script>
+</html>
