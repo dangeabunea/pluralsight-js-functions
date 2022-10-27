@@ -139,7 +139,6 @@ boeing747.print();
 
  */
 
-
 /* passing value of this using bind
 function printAircraftInfo(message){
     console.log(`${message}: ${this.make}, ${this.capacity}`);
@@ -159,3 +158,25 @@ const plane = {make: 'Embraer', capacity: 200}
 printAircraftInfo.call(plane, 'Aircraft summary');
  */
 
+/* bind with callback
+class Aircraft {
+    engineStarted = false;
+
+    constructor() {
+    }
+
+    start() {
+        setTimeout(this.startEngine.bind(this), 1000);
+    }
+
+    startEngine(){
+        console.log(this);
+        console.log(this.engineStarted);
+        this.engineStarted = true;
+    }
+}
+
+const a = new Aircraft();
+a.start();
+
+ */
