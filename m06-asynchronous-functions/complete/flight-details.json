@@ -1,0 +1,43 @@
+[
+  {
+    "flight": "RO12345",
+    "from": "Paris",
+    "status": "On time",
+    "aircraft": "Boeing 737",
+    "nbPassengers": 170,
+    "pilots": [
+      "John Smith",
+      "Anna Johnson"
+    ]
+  },
+  {
+    "flight": "US67957",
+    "from": "Berlin",
+    "status": "On time",
+    "aircraft": "Airbus A330",
+    "nbPassengers": 285,
+    "pilots": [
+      "George Flint",
+      "Samuel Peterson"
+    ]
+  },
+  {
+    "flight": "AF89756",
+    "from": "New York",
+    "status": "Delayed",
+    "aircraft": "Boeing 777",
+    "nbPassengers": 301
+  },
+  {
+    "flight": "UAL7897",
+    "from": "Bucharest",
+    "status": "Cancelled",
+    "nbPassengers": 192
+  },
+  {
+    "flight": "OS4782",
+    "from": "Vienna",
+    "status": "On time",
+    "nbPassengers": "215"
+  }
+]

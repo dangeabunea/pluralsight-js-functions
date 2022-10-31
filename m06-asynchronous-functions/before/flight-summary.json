@@ -1,0 +1,22 @@
+[
+  {
+    "flight": "RO12345",
+    "from": "Paris"
+  },
+  {
+    "flight": "US67957",
+    "from": "Berlin"
+  },
+  {
+    "flight": "AF89756",
+    "from": "New York"
+  },
+  {
+    "flight": "UAL7897",
+    "from": "Bucharest"
+  },
+  {
+    "flight": "OS4782",
+    "from": "Vienna"
+  }
+]
