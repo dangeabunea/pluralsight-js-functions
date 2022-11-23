@@ -124,7 +124,6 @@ const displayTime = () => {
     document.getElementById('time').innerText = time;
 }
 
+
 displayTime();
-setInterval(() => {
-    displayTime();
-}, 1*1000);
+setInterval(displayTime, 1000);
