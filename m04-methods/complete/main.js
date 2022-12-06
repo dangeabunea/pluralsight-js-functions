@@ -1,48 +1,38 @@
 class FlightPlan {
-    #internalArrivalTime = null;
+    #internalDepartureTime = null;
 
-    constructor(callsign = '', departure = '', destination = ''){
+    constructor(callsign = '', departure = '', destination = '') {
         this.callsign = callsign;
         this.departure = departure;
         this.destination = destination;
     }
 
-    set arrivalTime(date){
-        if(date){
-            this.#internalArrivalTime = date;
-        }
-    }
-
-    get arrivalTime(){
-        return this.#internalArrivalTime;
-    }
-
-    print(){
+    print() {
         let info = `Flight ${this.callsign} departs from ${this.departure} and lands at ${this.destination}`;
-
-        if(this.#internalArrivalTime){
-            info += ` at ${this.#internalArrivalTime.toLocaleString()}`;
-        }
-
         console.log(info);
     }
 
-    // CallSign;Departure;Destination
-    static fromString(flightPlanString){
-        const components = flightPlanString.split(';');
-        return new FlightPlan(...components);
+
+    get departureTime() {
+        return this.#internalDepartureTime.toLocaleString();
     }
 
+    set departureTime(date) {
+        if(!date) {
+            throw new Error('Date can not be null');
+        }
+
+        if(date - Date.now() < 0){
+            throw new Error('Date is in the past');
+        }
+
+        this.#internalDepartureTime = date;
+    }
 }
 
-
 const berlinToParis = new FlightPlan('AF123456', 'Berlin', 'Paris');
-
-berlinToParis.arrivalTime = new Date(2023, 11, 1, 22, 5);
-
 berlinToParis.print();
+berlinToParis.departureTime = new Date(2024,1,1,18,00);
+console.log(berlinToParis.departureTime);
 
-let londonToTokyo = FlightPlan.fromString('BA345657;London;Tokyo');
-londonToTokyo.print();
-
-
+berlinToParis.#internalDepartureTime = Date.now();
