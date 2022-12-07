@@ -1,42 +1,20 @@
 // Uncomment the relevant sections to see how they behave
 
-let callSign = 'KLM346';
-console.log(callSign);
+let maxAltitudeMeters = 10000;
+console.log(maxAltitudeMeters);
 
 const changeAltitude = (altitudeMeters) => {
-    let maxAltitudeMeters = 10000;
-    let minAltitudeMeters = 0;
+    let minAltitudeMeters = 0;  // local variable
 
     if (altitudeMeters < maxAltitudeMeters &&
         altitudeMeters > minAltitudeMeters) {
         console.log(`Changing altitude to ${altitudeMeters}`);
         return;
     }
-
-    console.log('Can not change altitude');
-}
-changeAltitude(5000);
-
-/* block scope
-const changeAltitude = (altitudeMeters) => {
-    let maxAltitudeMeters = 10000;
-    let minAltitudeMeters = 0;
-
-    if (altitudeMeters < maxAltitudeMeters &&
-        altitudeMeters > minAltitudeMeters) {
-
-        let altitudeMeters = 1000;
-
-        console.log(`Changing altitude to ${altitudeMeters}`);
-        return;
-    }
-
-    console.log('Can not change altitude');
+    console.log('Can not change altitude: out of bounds');
 }
 
-changeAltitude(7000);
-
- */
+console.log(changeAltitude(5000));
 
 /* closure
 (initFlight = () => {
