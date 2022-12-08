@@ -17,19 +17,19 @@ const changeAltitude = (altitudeMeters) => {
 console.log(changeAltitude(5000));
 
 /* closure
+let add;
+
 (initFlight = () => {
-    let nbPassengers = 100;
+  let nbPassengers = 100;
 
-    const addPassenger = () => {
-        nbPassengers++;
-        console.log(nbPassengers);
-    }
+  const addPassenger = () => {
+    nbPassengers++;
+    console.log(nbPassengers);
+  };
 
-    return addPassenger;
+  add = addPassenger;
 })();
 
-const add = initFlight();
-add();
 add();
 
  */
