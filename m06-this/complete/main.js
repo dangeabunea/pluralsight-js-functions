@@ -16,6 +16,20 @@ function printThis() {
 printThis();
  */
 
+function Helicopter(speed) {
+    this.speed = speed;
+}
+
+/* Constructor
+
+function Helicopter(speed) {
+    this.speed = speed;
+}
+let h = new Helicopter(200);
+console.log(h.speed);
+
+ */
+
 /* this in class function
 class Aircraft {
     make = '';
