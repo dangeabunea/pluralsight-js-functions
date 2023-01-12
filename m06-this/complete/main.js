@@ -112,14 +112,19 @@ boeing747.print();
 */
 
 
-/* passing value of this using call
-function printAircraftInfo(message){
-    console.log(`${message}: ${this.make}, ${this.capacity}`);
+/* passing value of this using call & bind
+function alertPassenger(name){
+    console.log(`${name}: ${this.message}`);
 }
 
-const plane = {make: 'Embraer', capacity: 200}
-printAircraftInfo.call(plane, 'Aircraft summary');
+const presentToGateWarning = {message: 'Please present to boarding gate 3', priority: 1}
+
+alertPassenger.call(presentToGateWarning, 'John Doe');
+
+const alertJohnDoe = alertPassenger.bind(presentToGateWarning, 'John Doe');
+alertJohnDoe();
  */
+
 
 /* bind with callback
 class Aircraft {
