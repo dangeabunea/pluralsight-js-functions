@@ -95,6 +95,23 @@ const boundPrint = printAircraftInfo.bind({make: 'Airbus A380', capacity: 500});
 boundPrint('Aircraft summary');
  */
 
+
+/* ARROW
+
+let boeing747 = {
+    make: 'Boeing 747',
+    capacity: 450,
+
+    print: () => {
+        console.log(this);
+    }
+}
+
+boeing747.print();
+
+*/
+
+
 /* passing value of this using call
 function printAircraftInfo(message){
     console.log(`${message}: ${this.make}, ${this.capacity}`);
